@@ -1,0 +1,53 @@
+.footer {
+    font-family: 'Arial', sans-serif;
+    margin-top: 0;
+    padding: 0;
+}
+
+/* Sezione superiore */
+.footer-top {
+    background-color: #f6f0e0; /* sabbia */
+    text-align: center;
+    padding: 30px 20px 40px;
+    color: #3a3a3a;
+    position: relative;
+    border-top: 4px solid #e4d7b5;
+}
+
+.footer-logo {
+    width: 120px;
+    margin-bottom: 0px;
+}
+
+.footer-divider {
+    width: 60px;
+    height: 2px;
+    background-color: #c9a659; /* colore oro/miele in tono con i bottoni */
+    margin: 20px auto 30px;
+    border-radius: 2px;
+}
+
+.footer-line {
+    font-size: 16px;
+    margin: 4px 0;
+    line-height: 1.5;
+}
+
+.footer-line strong {
+    font-weight: bold;
+    color: #2c2c2c;
+}
+
+.footer-bottom {
+    background-color: #00324a;
+    text-align: center;
+    padding: 10px 10px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer-bottom .policy {
+    cursor: default;
+    text-decoration: underline;
+    margin: 0 6px;
+}

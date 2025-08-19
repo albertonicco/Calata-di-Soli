@@ -1,0 +1,160 @@
+.home-description-container {
+    background-color: #f8f0dc;
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.home-description-card {
+    display: flex;
+    width: 95%; /* aumentato */
+    max-width: 1300px; /* aumentato */
+    height: 600px; /* aumentato da ~550px */
+    margin: 0 auto;
+    border-radius: 18px;
+    background-color: #fff;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+
+
+.mobile-separator {
+    display: none; /* di default nascosto */
+}
+.text-section {
+    flex: 1;
+    padding: 0.5rem 2.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    overflow-y: auto;
+}
+
+.logo {
+    height: 60px;
+    margin-bottom: -0.1rem;
+    margin-top: 0rem;
+
+    object-fit: contain;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 0.1rem;
+    margin-top: -0.1rem;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.8rem;
+    text-align: center;
+}
+
+.description {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 1.7rem;
+    margin-top: 0.9rem;
+    text-align: justify;
+}
+
+.buttons {
+    display: flex;
+    gap: 1.7rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-blue {
+    background-color: var(--sand);
+    color: var(--blue);
+
+   
+    border-radius: 12px;
+
+    cursor: pointer;
+    transition: background 0.3s ease;
+    padding: 0.9rem 1rem;
+
+    font-weight: 600;
+    font-size: 0.8rem;
+
+}
+
+.btn-blue:hover {
+
+    background-color: #f8d28a;
+    opacity: 0.9;
+    transform: translateY(-2px);
+
+}
+
+.separators {
+    width: 6px;
+    background: linear-gradient(to bottom, #003c5e, #006a90);
+    box-shadow: 0 0 4px rgba(0, 60, 94, 0.2);
+    border-radius: 1px;
+    margin: 0 0.1px;
+}
+
+
+
+.image-section {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.main-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media (max-width: 768px) {
+    .home-description-card {
+        flex-direction: column-reverse; /* Da row → column */
+        height: auto; /* Altezza automatica */
+    }
+
+    .image-section {
+        width: 100%;
+        height: 250px; /* Altezza fissa per immagine */
+    }
+
+    .main-photo {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .text-section {
+        padding: 0.2rem 1.5rem;
+        overflow-y: visible;
+    }
+    .mobile-separator {
+        display: block;
+        height: 4px;
+        width: 60px;
+        background-color: #19475c;
+        margin: 1.2rem auto;
+        border-radius: 2px;
+    }
+    .btn-blue {
+       margin-bottom: 0.5rem;
+
+    }
+
+
+
+}

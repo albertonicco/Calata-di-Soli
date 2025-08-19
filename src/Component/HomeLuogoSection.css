@@ -1,0 +1,160 @@
+.home-description-container2 {
+    background-color: #f8f0dc;
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.home-description-card2 {
+    display: flex;
+    width: 95%; /* aumentato */
+    max-width: 1300px; /* aumentato */
+    height: 600px; /* aumentato da ~550px */
+    margin: 0 auto;
+    border-radius: 18px;
+    background-color: #fff;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.mobile-separator2 {
+    display: none; /* di default nascosto */
+}
+
+
+.text-section2 {
+    flex: 1;
+    padding: 0.5rem 2.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    overflow-y: auto;
+}
+
+.logo3 {
+    height: 60px;
+    margin-bottom: -0.1rem;
+    margin-top: 0rem;
+
+    object-fit: contain;
+}
+
+.title2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 0.1rem;
+    margin-top: 0.7rem;
+    text-align: center;
+}
+
+.subtitle2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.8rem;
+    text-align: center;
+}
+
+.description2 {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 1.7rem;
+    margin-top: 0.9rem;
+    text-align: justify;
+}
+
+.buttons2 {
+    display: flex;
+    gap: 1.7rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-blue2 {
+    background-color: var(--sand);
+    color: var(--blue);
+
+    border-radius: 12px;
+
+    cursor: pointer;
+    transition: background 0.3s ease;
+    padding: 0.9rem 1rem;
+
+    font-weight: 600;
+
+    font-size: 0.8rem;}
+
+
+.btn-blue2:hover {
+
+    background-color: #f8d28a;
+    opacity: 0.9;
+    transform: translateY(-2px);
+
+}
+
+.separators2 {
+    width: 6px;
+    background: linear-gradient(to bottom, #003c5e, #006a90);
+    box-shadow: 0 0 4px rgba(0, 60, 94, 0.2);
+    border-radius: 1px;
+    margin: 0 0.1px;
+}
+
+
+
+.image-section2 {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.main-photo2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media (max-width: 768px) {
+    .home-description-card2 {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .image-section2 {
+        width: 100%;
+        max-height: 250px;
+        height: 250px !important; /* forza assolutamente l'altezza */
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    .image-section2 img,
+    .main-photo2 {
+        height: 100% !important;
+        width: 100%;
+        object-fit: cover !important;
+        display: block;
+    }
+
+    .text-section2 {
+        padding: 0.8rem 1.5rem;
+    }
+
+    .mobile-separator2 {
+        display: block;
+        height: 4px;
+        width: 60px;
+        background-color: #19475c;
+        margin: 0.5rem auto;
+        border-radius: 2px;
+    }
+    .btn-blue2 {
+      margin-bottom: 0.5rem;
+    }
+}

@@ -1,0 +1,102 @@
+
+.HomeContactSection {
+      background-color: #f8f0dc;;
+}
+.card2 {
+    background-color: #ffffff;
+    border: 1px solid #003b5c;
+    padding: 1.5rem;
+    border-radius: 6px;
+}
+.contacts-left {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+
+/* Linea sotto il titolo principale */
+.form-card .main-form-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    color: #003b5c;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #003b5c;
+}
+
+/* Linea sotto i titoli interni */
+.form-section {
+    margin-bottom: 2rem;
+}
+.form-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    color: #003b5c;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid #003b5c;
+}
+
+.row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.2rem;
+}
+
+.row input,
+.row select,
+textarea {
+    flex: 1 1 48%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+select {
+    width: 100%;
+    height: 2.3rem;
+    margin-bottom: 0.8rem;
+
+}
+
+/* Textarea full width */
+textarea {
+    flex: 1 1 100%;
+    resize: vertical;
+    min-height: 140px;
+    width: 100%;
+}
+
+/* Privacy row */
+.privacy-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.privacy-row a {
+    color: #003b5c;
+    text-decoration: underline;
+}
+
+/* Bottone centrato */
+.submit-button {
+    background-color: var(--sand);
+    color: var(--blue);
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    margin: 2rem auto 0;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+}
+
+.submit-button:hover {
+    background-color: #f8d28a;
+    opacity: 0.9;
+}

@@ -1,0 +1,177 @@
+.services-page {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #fdf5ed;
+    color: #1a1a1a;
+}
+
+.hero-section {
+    background-image: url('../Assets/servizi.jpg'); /* Sostituisci con il percorso corretto */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section .overlay {
+    background-color: rgba(0, 0, 0, 0.4); /* Oscura l'immagine */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section h1 {
+    color: white;
+    font-size: 3rem;
+    z-index: 2;
+}
+
+.services-header {
+
+    text-align: center;
+    padding: 40px 20px 10px;
+}
+
+.header-inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.services-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #19475c;
+    margin-bottom: 20px;
+}
+
+.services-header .subtitle {
+    font-family: 'Cormorant Garamond', serif; /* oppure 'Georgia', serif */
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #3b3b3b;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.blue-divider {
+    height: 4px;
+    width: 100px;
+    background-color: #19475c;
+    margin: 0 auto 40px;
+    border-radius: 2px;
+}
+
+
+
+/* Griglia Servizi */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, auto);
+    gap: 24px;
+    padding: 20px 80px 40px;
+
+}
+
+
+/* Card Servizio */
+
+.service-card {
+    background-color: #f2e8d5; /* sabbia chiara */
+    padding: 10px;
+    border-radius: 16px;
+    border: 2px solid ;
+    border-color: var(--blue);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Icona */
+
+.service-card .icon {
+    font-size: 2rem;
+    color: #19475c;
+    margin-bottom: 12px;
+}
+
+/* Testo */
+
+.service-card h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #19475c;
+}
+.service-button button {
+    background-color: var(--sand);
+    color: var(--blue);
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-align: center;
+margin-left: 40rem;
+    margin-bottom: 35px ;
+}
+
+.service-button button:hover {
+    background-color: #f8d28a;
+    opacity: 0.9;
+}
+
+.service-button {
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px;
+        padding: 20px 30px 40px; /* margini laterali più stretti */
+    }
+
+    .service-card {
+        padding: 12px 8px;
+        height: auto; /* togli qualsiasi altezza fissa */
+        border-radius: 12px;
+    }
+
+    .service-card .icon {
+        font-size: 1.6rem;
+        margin-bottom: 6px;
+    }
+
+    .service-card h4 {
+        font-size: 0.85rem;
+        line-height: 1.3;
+    }
+
+    .service-button {
+        grid-column: span 2; /* se vuoi che il bottone occupi tutta la riga */
+        text-align: center;
+        margin-top: 20px;
+        margin-left: 7rem;
+
+    }
+
+    .service-button button {
+
+        margin: 2rem auto;
+        padding: 10px 20px;
+        font-size: 14px;
+        align-content: center;
+    }
+}

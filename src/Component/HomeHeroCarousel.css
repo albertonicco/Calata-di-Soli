@@ -1,0 +1,163 @@
+/* Rimuove spazi laterali */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+}
+.custom-carousel-wrapper {
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 70px);
+    overflow: hidden;
+}
+
+.carousel-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.bg-prev {
+    z-index: 0;
+    opacity: 1;
+}
+
+.bg-current {
+    z-index: 1;
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+
+.carousel-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 2;
+}
+
+.carousel-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 3;
+    padding: 0 1.5rem;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 4;
+    opacity: 0.6;
+    transition: opacity 0.3s, transform 0.3s ease;
+}
+
+.arrow:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.2);
+}
+
+.left-arrow { left: 2%; }
+.right-arrow { right: 2%; }
+
+
+
+.hero-subtitle {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    opacity: 0.85;
+    position: relative;
+}
+
+.hero-subtitle::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: white;
+    margin: 0.6rem auto 0 auto;
+    border-radius: 1px;
+}
+
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.hero-tagline {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.hero-button {
+    background: transparent;
+    border: 2px solid white;
+    padding: 0.7rem 1.8rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: white;
+    color: #004e7c;
+}
+
+
+@media (max-width: 768px) {
+    .arrow {
+        font-size: 1.6rem;
+        opacity: 0.7;
+    }
+
+    .left-arrow {
+        left: 1rem;
+    }
+
+    .right-arrow {
+        right: 2rem;
+    }
+
+    .hero-button {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.85rem;
+    }
+
+    .hero-title {
+        font-size: 2.3rem;
+    }
+
+    .hero-tagline {
+        font-size: 1.4rem;
+    }
+
+    .carousel-content {
+        padding: 0 1rem;
+    }
+}
+

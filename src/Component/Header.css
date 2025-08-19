@@ -1,0 +1,350 @@
+:root {
+    --blue: #004e7c;
+    --sand: #f6c66e;
+    --white: #ffffff;
+    --border-light: rgba(255, 255, 255, 0.2);
+}
+
+/* === Header Principale === */
+.header {
+    height: auto;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--blue);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.header-container {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Lato', sans-serif;
+    flex-wrap: nowrap ;
+}
+
+/* === Sinistra: Logo e titolo === */
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo2 {
+    height: 50px;
+    margin-right: 0.5rem;
+}
+
+.site-name {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+
+/* === Centro (solo desktop) === */
+.nav-center {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-left: 31rem;
+    margin-right: 1rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    font-weight: 400;
+    padding-bottom: 4px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    font-weight: 700;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: var(--sand);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.separator {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1.1rem;
+}
+
+/* === Destra: lingue + bottone + toggle === */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.nav-button {
+    background-color: var(--sand);
+    color: var(--blue);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #f8d28a;
+    opacity: 0.9;
+}
+
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.flag {
+    height: 20px;
+    width: 26px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.flag:hover {
+    opacity: 0.8;
+}
+
+/* === Bottone hamburger per mobile === */
+/* === Hamburger === */
+.menu-toggle {
+    background-color: var(--sand);
+    color: var(--blue);
+    font-size: 1.2rem;
+    border: none;
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* === Mobile Menu (con animazione e ombra) === */
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blue);
+    padding: 0.8rem;
+    border-top: 1px solid var(--border-light);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    gap: 0.3rem;
+    animation: slideDown 0.3s ease-out;
+}
+
+
+
+.mobile-menu .nav-link {
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--sand);
+    text-decoration: none;
+    transition: background-color 0.2s ease, padding-left 0.2s;
+}
+
+.mobile-menu .nav-link:last-child {
+    border-bottom: none;
+}
+
+.mobile-menu .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding-left: 0.5rem;
+}
+@media (max-width: 768px) {
+    .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.6rem 1rem;
+        font-family: 'Lato', sans-serif;
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 1.4rem;
+        background-color: var(--sand);
+        color: var(--blue);
+        border: none;
+        padding: 0.4rem 0.6rem;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-right: 0.8rem;
+    }
+
+    .header-left {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        flex-shrink: 0;
+    }
+
+    .logo2 {
+        height: 50px;
+    }
+
+    .site-name {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--white);
+        white-space: nowrap;
+    }
+
+    .header-right {
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+        flex-shrink: 0;
+    }
+
+    .nav-center {
+        display: none;
+    }
+    .nav-button{
+        display: none;
+    }
+    .lang-switcher{
+        display: none;
+    }
+
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--blue);
+        padding: 1rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        animation: slideDown 0.3s ease-out;
+        gap: 0.5rem;
+    }
+
+    .mobile-menu .nav-link {
+        color: var(--white);
+        font-size: 0.9rem;
+        font-weight: 500;
+        padding: 0.7rem 0;
+        border-bottom: 1px solid var(--sand);
+        text-decoration: none;
+        text-align: center;
+        transition: background-color 0.2s ease;
+    }
+
+    .mobile-menu .nav-link:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .mobile-menu .nav-link:last-child {
+        background-color: var(--sand);
+        color: var(--blue);
+        font-weight: 700;
+        border: none;
+        border-radius: 20px;
+        padding: 0.7rem 1rem;
+        margin-top: 0.4rem;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+
+
+/* === Desktop === */
+@media (min-width: 769px) {
+    .header-container {
+        padding: 1rem;
+    }
+
+    .logo2 {
+        height: 50px;
+    }
+
+    .site-name {
+        font-size: 1.4rem;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav-button {
+        font-size: 0.9rem;
+    }
+
+    .mobile-menu {
+        display: none !important;
+    }
+}
+/* Dropdown container */
+.nav-item {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--blue);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: none;
+    flex-direction: column;
+    min-width: 200px;
+    z-index: 999;
+    padding: 0.5rem 0;
+}
+
+.dropdown-link {
+    padding: 0.5rem 1rem;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Mostra menu al passaggio del mouse */
+.nav-item:hover .dropdown-menu {
+    display: flex;
+}

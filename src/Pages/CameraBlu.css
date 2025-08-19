@@ -1,0 +1,171 @@
+.camera-mirto-page {
+    background-color: #fef9ed;
+}
+
+.camera-hero-carousel2 {
+    position: relative;
+    height: 65vh;
+    overflow: hidden;
+}
+
+.carousel-image2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.6s ease;
+    z-index: 1;
+    opacity: 1;
+}
+
+.carousel-image2.fade {
+    opacity: 0;
+}
+
+.camera-overlay2 {
+    background-color: rgba(0, 42, 71, 0.4);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.camera-overlay2 h1 {
+    color: white;
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+/* Frecce carosello */
+.carousel-btn2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    background-color: var(--sand); /* sabbia */
+    border: 2px solid var(--blue); /* bordo blu */
+    color: var(--blue); /* icona blu */
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5rem 0.9rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-btn2:hover {
+    background-color: #f8d28a; /* sabbia un po' più intensa */
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-btn2.left {
+    left: 20px;
+}
+
+.carousel-btn2.right {
+    right: 20px;
+}
+
+
+
+.camera-overlay2 {
+    background-color: rgba(0, 42, 71, 0.4); /* blu elegante trasparente */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.camera-overlay2 h1 {
+    color: white;
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+/* Badge section */
+.camera-details2 {
+    background-color: #fff;
+    padding: 1.3rem 2rem;
+    display: flex;
+    margin-right: 0.7rem;
+    margin-left: 0.7rem;
+    justify-content: center;
+    gap: 2rem;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    margin-top: 1rem;
+}
+
+.badge-item2 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+    color: #333;
+    border-right: 1px solid #ccc;
+    padding-right: 1.5rem;
+}
+
+.badge-item2:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+.badge-item2 img {
+    height: 1.4rem;
+}
+.camera-description2 {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+
+.camera-text2 {
+    font-size: 1.15rem;
+    color: #333;
+    line-height: 1.7;
+    font-style: italic;
+    border-left: 4px solid #003c5c;
+    padding-left: 1rem;
+}
+
+/* Galleria immagini */
+.camera-gallery2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.camera-gallery2 img {
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease;
+}
+
+.camera-gallery2 img:hover {
+    transform: scale(1.03);
+}
+@media (max-width: 768px) {
+    .camera-overlay2 h1 {
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    }
+}

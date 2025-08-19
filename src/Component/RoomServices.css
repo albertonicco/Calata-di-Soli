@@ -1,0 +1,115 @@
+:root {
+    --blue: #004e7c;
+    --sand: #f6c66e;}
+.room-services {
+    background-color: #fef7f0; /* sfondo sabbia */
+    padding: 20px 20px 40px;
+}
+
+.services-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px 50px;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 24px;
+    border-radius: 12px;
+
+    background: linear-gradient(135deg, #fef7f0 0%, #ffffff 100%);
+    border-left: 6px solid #295C7A;
+    box-shadow: 0 2px 8px rgba(189, 139, 108, 0.15);
+
+    transition: transform 0.2s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-2px);
+}
+
+.service-icon {
+    color: #295C7A;
+
+
+
+    font-size: 40px;
+    flex-shrink: 0;
+}
+
+.service-text {
+    font-weight: 600;
+    font-size: 15px;
+    color: #2b2b2b;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+
+
+.services-button {
+    text-align: center;
+}
+
+.services-button button {
+    background-color: var(--sand);
+    color: var(--blue);
+    padding: 14px 28px;
+    border: none;
+    margin-left: 23rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top:  25px;
+
+    margin-bottom: 15px ;
+}
+
+.services-button button:hover {
+    background-color: #f8d28a;
+    opacity: 0.9;
+}
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr 1fr; /* 2 colonne su mobile */
+        gap: 20px;
+    }
+
+    .service-item {
+        padding: 14px 16px;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .service-icon {
+        font-size: 32px;
+    }
+
+    .service-text {
+        font-size: 14px;
+    }
+
+    .services-button {
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .services-button button {
+        margin-left: 0;
+        width: 100%;
+        max-width: 300px;
+        margin-inline: auto;
+        display: block;
+        text-decoration: none;
+    }
+}
