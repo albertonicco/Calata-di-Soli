@@ -1,6 +1,6 @@
 // FloatingContactButton.jsx
 import React from 'react';
-import { FaRegEnvelope } from 'react-icons/fa'; // icona "scrivi"
+
 import './FloatingContactButton.css';
 import { Link} from 'react-router-dom';
 import { FaRegEdit } from 'react-icons/fa';

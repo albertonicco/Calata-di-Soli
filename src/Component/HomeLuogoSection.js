@@ -1,4 +1,4 @@
-import logo3 from '../Assets/Logosole.png';
+
 import overlayImg from '../Assets/foto bonus.jpg';
 import React from 'react';
 import './HomeLuogoSection.css';

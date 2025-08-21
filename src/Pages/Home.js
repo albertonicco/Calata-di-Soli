@@ -2,7 +2,7 @@ import HomeHeroCarousel from "../Component/HomeHeroCarousel";
 import HomeDescriptionSection from "../Component/HomeDescriptionSection";
 import HomeLuogoSection from "../Component/HomeLuogoSection";
 import HomeContactSection from "../Component/HomeContactSection";
-import HomeFooter from "../Component/Footer";
+
 import HomeFooter2 from "../Component/Footer2";
 import {useNavigate} from "react-router-dom";
 import {useLocation} from "react-router-dom";

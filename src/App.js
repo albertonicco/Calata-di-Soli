@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Routes, Route, BrowserRouter} from 'react-router-dom';
+import { Routes, Route, BrowserRouter} from 'react-router-dom';
 import Header from './Component/Header';
 import Home from './Pages/Home';
 import Rooms from './Pages/Rooms';
@@ -10,12 +10,13 @@ import Contacts from "./Pages/Contacts";
 import CameraBlu from "./Pages/CameraBlu";
 import CameraAran from "./Pages/CameraAran";
 import {useLocation} from "react-router-dom";
-import {useEffect} from "react";
+
 import './App.css';
-import HomeHeroCarousel from "./Component/HomeHeroCarousel";
+
 import ScrollToTop from "./Component/ScrollToTop";
 import FloatingContactButton from "./Component/FloatingContactButton";
 import {LanguageProvider} from "./Component/LanguageContext";
+import {useEffect} from "react";
 
 function App() {
     function ScrollToAnchorOnMount() {
