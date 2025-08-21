@@ -89,7 +89,7 @@ const HomeContactSection = () => {
                                 <input type="checkbox" id="privacy" />
                                 <label htmlFor="privacy">
                                     {text.privacy}
-                                    <a href={}>{text.privacyLink}</a>
+                                    <a >{text.privacyLink}</a>
                                 </label>
                             </div>
 
