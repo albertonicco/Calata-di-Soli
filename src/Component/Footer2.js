@@ -1,7 +1,8 @@
 import React from "react";
 import "./Footer2.css";
 import logo from "../Assets/Logo.png";
-import { useLanguage } from "../Component/LanguageContext"; // ← Assicurati che il path sia corretto
+import { useLanguage } from "../Component/LanguageContext";
+import {Link} from "react-router-dom"; // ← Assicurati che il path sia corretto
 
 const HomeFooter2 = () => {
     const handleCookieSettings = () => {
@@ -49,7 +50,8 @@ const HomeFooter2 = () => {
 
             {/* Seconda sezione */}
             <div className="footer-bottom2">
-                {text.copyright} • <span className="policy">{text.privacy}</span> • <span className="policy" onClick={handleCookieSettings} style={{ cursor: 'pointer' }}>Cookie Policy</span>
+                {text.copyright} •<Link to="/privacy-policy" className="policy">Privacy Policy</Link>
+                • <span className="policy" onClick={handleCookieSettings} style={{ cursor: 'pointer' }}>Cookie Policy</span>
             </div>
         </footer>
     );
