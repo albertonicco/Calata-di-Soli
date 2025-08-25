@@ -4,6 +4,12 @@ import logo from "../Assets/Logo.png";
 import { useLanguage } from "../Component/LanguageContext"; // ← Assicurati che il path sia corretto
 
 const HomeFooter2 = () => {
+    const handleCookieSettings = () => {
+        if (window.Cookiebot) {
+            window.Cookiebot.show();
+        }
+    };
+
     const { language } = useLanguage();
 
     const t = {
@@ -38,12 +44,12 @@ const HomeFooter2 = () => {
                 <p className="footer-line2">{text.address}</p>
                 <p className="footer-line2">{text.tel} <strong></strong></p>
                 <p className="footer-line2">{text.email} <strong></strong></p>
-                <p className="footer-line2">{text.vat}</p>
+
             </div>
 
             {/* Seconda sezione */}
             <div className="footer-bottom2">
-                {text.copyright} • <span className="policy">{text.privacy}</span> • <span className="policy" onClick={() => window.Cookiebot && window.Cookiebot.show()}>Cookie Policy</span>
+                {text.copyright} • <span className="policy">{text.privacy}</span> • <span className="policy" onClick={handleCookieSettings} style={{ cursor: 'pointer' }}>Cookie Policy</span>
             </div>
         </footer>
     );
