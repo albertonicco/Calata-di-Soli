@@ -22,12 +22,12 @@ fondendo comfort moderno e atmosfera mediterranea. Un invito al riposo, alla sem
 e alla connessione con la natura.`,
 
             ginestra: {
-                title: "Camera Ginestra",
+                title: "Camera Simone",
                 description: "Luminosa e accogliente, con vista sul mare e profumi di macchia mediterranea.",
                 button: "Scopri di più"
             },
             mirto: {
-                title: "Camera Mirto",
+                title: "Camera Carlotta",
                 description: "Atmosfera intima e rilassante, ideale per un soggiorno di puro benessere.",
                 button: "Scopri di più"
             },

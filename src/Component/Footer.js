@@ -3,6 +3,13 @@ import "./Footer.css";
 import logo from "../Assets/Logo.png"; // Inserisci il tuo logo corretto
 
 const HomeFooter = () => {
+    const openCookiePreferences = () => {
+        if (typeof window !== 'undefined' && window.Cookiebot) {
+            window.Cookiebot.show();
+        }
+    };
+
+
     return (
         <footer className="footer">
             {/* Prima sezione */}
@@ -17,7 +24,7 @@ const HomeFooter = () => {
 
             {/* Seconda sezione */}
             <div className="footer-bottom">
-                © Calata di Soli - Tutti i diritti riservati • <span className="policy">Privacy Policy</span> • <span className="policy">Cookie Policy</span>
+                © Calata di Soli - Tutti i diritti riservati • <span className="policy">Privacy Policy</span>  <span className="policy" onClick={openCookiePreferences}>Cookie Policy</span>
             </div>
         </footer>
     );
