@@ -43,7 +43,7 @@ const HomeFooter2 = () => {
 
             {/* Seconda sezione */}
             <div className="footer-bottom2">
-                {text.copyright} • <span className="policy">{text.privacy}</span> • <span className="policy">{text.cookie}</span>
+                {text.copyright} • <span className="policy">{text.privacy}</span> • <span className="policy" onClick={() => window.Cookiebot && window.Cookiebot.show()}>Cookie Policy</span>
             </div>
         </footer>
     );
