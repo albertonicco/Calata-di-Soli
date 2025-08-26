@@ -17,6 +17,7 @@ import ScrollToTop from "./Component/ScrollToTop";
 import FloatingContactButton from "./Component/FloatingContactButton";
 import {LanguageProvider} from "./Component/LanguageContext";
 import {useEffect} from "react";
+import PrivacyPolicy from "./Component/PrivacyPolicy";
 
 function App() {
     function ScrollToAnchorOnMount() {
@@ -58,6 +59,7 @@ function App() {
 
                 <Route path="/prenotazione" element={<Booking />} />
                 <Route path="/contatti" element={<Contacts />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             </Routes>
           </main>
         </div>
