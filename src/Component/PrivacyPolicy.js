@@ -104,22 +104,32 @@ const PrivacyPolicy = () => {
     const selected = content[language];
 
     return (
-        <div style={{ padding: "2rem", maxWidth: "800px", margin: "0 auto" }}>
-            <h1>{selected.title}</h1>
-            <p style={{ fontStyle: "italic", marginBottom: "2rem" }}>{selected.updated}</p>
+        <div style={{
+            display: "flex",
+            flexDirection: "column",
+            minHeight: "100vh"
+        }}>
+            <div style={{
+                flex: 1,
+                padding: "2rem",
+                maxWidth: "800px",
+                margin: "0 auto"
+            }}>
+                <h1>{selected.title}</h1>
+                <p style={{ fontStyle: "italic", marginBottom: "2rem" }}>{selected.updated}</p>
 
-            {selected.sections.map((section, index) => (
-                <div key={index} style={{ marginBottom: "1.8rem" }}>
-                    <h2 style={{ color: "#19475c", fontSize: "1.4rem", marginBottom: "0.4rem" }}>
-                        {section.heading}
-                    </h2>
-                    <p style={{ whiteSpace: "pre-line", lineHeight: "1.7" }}>{section.text}</p>
-                </div>
-            ))}
+                {selected.sections.map((section, index) => (
+                    <div key={index} style={{ marginBottom: "1.8rem" }}>
+                        <h2 style={{ color: "#19475c", fontSize: "1.4rem", marginBottom: "0.4rem" }}>
+                            {section.heading}
+                        </h2>
+                        <p style={{ whiteSpace: "pre-line", lineHeight: "1.7" }}>{section.text}</p>
+                    </div>
+                ))}
+            </div>
 
             <HomeFooter2 />
         </div>
-    );
-};
+    )};
 
 export default PrivacyPolicy;
