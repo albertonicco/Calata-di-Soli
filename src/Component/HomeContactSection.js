@@ -2,9 +2,13 @@ import React, { useState } from 'react';
 import './HomeContactSection.css';
 import { useLanguage } from '../Component/LanguageContext';
 import emailjs from '@emailjs/browser';
+import ReCAPTCHA from "react-google-recaptcha";
+
 
 const HomeContactSection = () => {
     const { language } = useLanguage();
+    const [captchaValue, setCaptchaValue] = useState(null);
+
 
     const [formData, setFormData] = useState({
         name: '',
@@ -99,6 +103,11 @@ const HomeContactSection = () => {
             setSubmitStatus(null);
             return;
         }
+        if (!captchaValue) {
+            alert(language === 'it' ? 'Completa il CAPTCHA.' : 'Please complete the CAPTCHA.');
+            return;
+        }
+
 
         setErrors({});
 
@@ -255,6 +264,11 @@ const HomeContactSection = () => {
                                 {errors.privacy && <p className="error-text">{text.required}</p>}
                                 {submitStatus === 'success' && <p className="success-text">{text.success}</p>}
                                 {submitStatus === 'error' && <p className="error-text">{text.error}</p>}
+                                <ReCAPTCHA
+                                    sitekey="6LcyprQrAAAAAC56jbypJ5lER8dd0fjdmQatJyHN"
+                                    onChange={(value) => setCaptchaValue(value)}
+                                />
+
 
                                 <button type="submit" className="submit-button">
                                     {text.button}
