@@ -45,6 +45,8 @@ const HomeFooter2 = () => {
                 <p className="footer-line2">{text.address}</p>
                 <p className="footer-line2">{text.tel} <strong></strong></p>
                 <p className="footer-line2">{text.email} <strong></strong></p>
+                <p className="footer-line2">CIN: IT090064C2000S4981 • IUN: S4981</p>
+
 
             </div>
 
