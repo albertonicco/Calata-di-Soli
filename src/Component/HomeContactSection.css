@@ -101,3 +101,57 @@ textarea {
     background-color: #f8d28a;
     opacity: 0.9;
 }
+/* ✅ Messaggi di errore */
+.error-text {
+    color: #d93025;
+    background-color: #fdecea;
+    border-left: 4px solid #d93025;
+    padding: 8px 12px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* ✅ Messaggio di successo */
+.success-text {
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border-left: 4px solid #0f5132;
+    padding: 10px 14px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* ✅ Input con errore (bordi rossi) */
+input.error,
+textarea.error,
+select.error {
+    border: 1.5px solid #d93025 !important;
+    background-color: #fff6f6;
+}
+
+/* ✅ Checkbox error */
+.privacy-row input[type="checkbox"].error {
+    outline: 2px solid #d93025;
+    outline-offset: 2px;
+}
+.error-text,
+.success-text {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
