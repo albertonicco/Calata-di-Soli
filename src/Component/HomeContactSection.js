@@ -4,11 +4,9 @@ import { useLanguage } from '../Component/LanguageContext';
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from "react-google-recaptcha";
 
-
 const HomeContactSection = () => {
     const { language } = useLanguage();
     const [captchaValue, setCaptchaValue] = useState(null);
-
 
     const [formData, setFormData] = useState({
         name: '',
@@ -46,7 +44,10 @@ const HomeContactSection = () => {
             privacy: 'Accetto le ',
             privacyLink: 'Norme sulla privacy',
             button: 'INVIA LA RICHIESTA',
-            required: 'Tutti i campi obbligatori devono essere compilati',
+            nameRequired: 'Il nome è obbligatorio.',
+            emailInvalid: 'Inserisci un indirizzo email valido.',
+            privacyRequired: 'Devi accettare le norme sulla privacy.',
+            captchaRequired: 'Completa il CAPTCHA.',
             success: 'Messaggio inviato con successo!',
             error: 'Errore nell\'invio. Riprova.'
         },
@@ -68,7 +69,10 @@ const HomeContactSection = () => {
             privacy: 'I accept the ',
             privacyLink: 'Privacy Policy',
             button: 'SEND REQUEST',
-            required: 'Please fill in all required fields',
+            nameRequired: 'Name is required.',
+            emailInvalid: 'Please enter a valid email address.',
+            privacyRequired: 'You must accept the privacy policy.',
+            captchaRequired: 'Please complete the CAPTCHA.',
             success: 'Message sent successfully!',
             error: 'Sending error. Please try again.'
         }
@@ -78,11 +82,9 @@ const HomeContactSection = () => {
 
     const validate = () => {
         const newErrors = {};
-
-        if (!formData.name.trim()) newErrors.name = true;
-        if (!formData.email || !formData.email.includes('@')) newErrors.email = true;
-        if (!formData.privacyAccepted) newErrors.privacy = true;
-
+        if (!formData.name.trim()) newErrors.name = text.nameRequired;
+        if (!formData.email || !formData.email.includes('@')) newErrors.email = text.emailInvalid;
+        if (!formData.privacyAccepted) newErrors.privacy = text.privacyRequired;
         return newErrors;
     };
 
@@ -103,15 +105,13 @@ const HomeContactSection = () => {
             setSubmitStatus(null);
             return;
         }
+
         if (!captchaValue) {
-            alert(language === 'it' ? 'Completa il CAPTCHA.' : 'Please complete the CAPTCHA.');
+            setErrors({ captcha: text.captchaRequired });
             return;
         }
 
-
         setErrors({});
-
-        // In futuro: invia i dati a un database qui
 
         const templateParams = {
             from_name: formData.name,
@@ -147,6 +147,7 @@ const HomeContactSection = () => {
                     message: '',
                     privacyAccepted: false
                 });
+                setCaptchaValue(null);
             })
             .catch(() => {
                 setSubmitStatus('error');
@@ -172,6 +173,8 @@ const HomeContactSection = () => {
                                         onChange={handleChange}
                                         className={errors.name ? 'error' : ''}
                                     />
+                                    {errors.name && <p className="error-text">{errors.name}</p>}
+
                                     <input
                                         type="email"
                                         name="email"
@@ -180,7 +183,9 @@ const HomeContactSection = () => {
                                         onChange={handleChange}
                                         className={errors.email ? 'error' : ''}
                                     />
+                                    {errors.email && <p className="error-text">{errors.email}</p>}
                                 </div>
+
                                 <div className="row">
                                     <input
                                         type="tel"
@@ -229,6 +234,7 @@ const HomeContactSection = () => {
                                         placeholder={text.adults}
                                         value={formData.adults}
                                         onChange={handleChange}
+                                        min="0"
                                     />
                                     <input
                                         type="number"
@@ -236,6 +242,7 @@ const HomeContactSection = () => {
                                         placeholder={text.children}
                                         value={formData.children}
                                         onChange={handleChange}
+                                        min="0"
                                     />
                                 </div>
 
@@ -260,15 +267,15 @@ const HomeContactSection = () => {
                                         <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">{text.privacyLink}</a>
                                     </label>
                                 </div>
-
-                                {errors.privacy && <p className="error-text">{text.required}</p>}
+                                {errors.privacy && <p className="error-text">{errors.privacy}</p>}
+                                {errors.captcha && <p className="error-text">{errors.captcha}</p>}
                                 {submitStatus === 'success' && <p className="success-text">{text.success}</p>}
                                 {submitStatus === 'error' && <p className="error-text">{text.error}</p>}
+
                                 <ReCAPTCHA
                                     sitekey="6LcyprQrAAAAAC56jbypJ5lER8dd0fjdmQatJyHN"
                                     onChange={(value) => setCaptchaValue(value)}
                                 />
-
 
                                 <button type="submit" className="submit-button">
                                     {text.button}
